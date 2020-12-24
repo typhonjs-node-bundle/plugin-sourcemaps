@@ -36,7 +36,7 @@ module.exports = async function(opts)
 {
    try
    {
-      process.pluginManager.add({ name: 'plugin-sourcemaps', instance: PluginHandler });
+      global.$$pluginManager.add({ name: 'plugin-sourcemaps', instance: PluginHandler });
 
       // TODO REMOVE
       process.stdout.write(`plugin-sourcemaps init hook running ${opts.id}\n`);
