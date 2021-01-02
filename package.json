@@ -1,9 +1,9 @@
 {
-  "name": "plugin-sourcemaps",
+  "name": "@typhonjs-node-rollup/plugin-sourcemaps",
   "description": "Provides an Oclif plugin to to configure rollup-plugin-sourcemaps for rollup-runner.",
   "version": "0.0.0",
   "author": "typhonrt",
-  "bugs": "https://github.com/typhonjs-node-bundle/npmbundle/issues",
+  "bugs": "https://github.com/typhonjs-node-rollup/issues/issues",
   "dependencies": {
     "rollup-plugin-sourcemaps": "^0.6.0"
   },
@@ -29,7 +29,7 @@
     "/oclif.manifest.json",
     "/src"
   ],
-  "homepage": "https://github.com/typhonjs-node-bundle/plugin-sourcemaps",
+  "homepage": "https://github.com/typhonjs-node-rollup/plugin-sourcemaps",
   "keywords": [
     "oclif-plugin"
   ],
@@ -41,7 +41,7 @@
       ]
     }
   },
-  "repository": "typhonjs-node-bundle/plugin-sourcemaps",
+  "repository": "typhonjs-node-rollup/plugin-sourcemaps",
   "scripts": {
     "eslint": "eslint .",
     "postpack": "rm -f oclif.manifest.json",
