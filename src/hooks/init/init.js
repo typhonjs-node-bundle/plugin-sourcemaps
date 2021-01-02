@@ -27,8 +27,10 @@ class PluginHandler
     */
    static onPluginLoad(ev)
    {
-      ev.eventbus.on('typhonjs:oclif:rollup:plugins:main:input:get', PluginHandler.getInputPlugin, PluginHandler);
-      ev.eventbus.on('typhonjs:oclif:rollup:plugins:npm:input:get', PluginHandler.getInputPlugin, PluginHandler);
+      // TODO: Note there is a conflict w/ @rollup/plugin-typescript if loaded before it.
+      // ev.eventbus.on('typhonjs:oclif:bundle:plugins:main:input:get', PluginHandler.getInputPlugin, PluginHandler);
+
+      ev.eventbus.on('typhonjs:oclif:bundle:plugins:npm:input:get', PluginHandler.getInputPlugin, PluginHandler);
    }
 }
 
@@ -43,7 +45,7 @@ module.exports = async function(opts)
 {
    try
    {
-      global.$$pluginManager.add({ name: '@typhonjs-node-bundle/plugin-sourcemaps', instance: PluginHandler });
+      global.$$pluginManager.add({ name: '@typhonjs-node-rollup/plugin-sourcemaps', instance: PluginHandler });
 
       // TODO REMOVE
       process.stdout.write(`plugin-sourcemaps init hook running ${opts.id}\n`);
