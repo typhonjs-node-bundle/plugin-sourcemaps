@@ -47,8 +47,7 @@ module.exports = async function(opts)
    {
       global.$$pluginManager.add({ name: '@typhonjs-node-rollup/plugin-sourcemaps', instance: PluginHandler });
 
-      // TODO REMOVE
-      process.stdout.write(`plugin-sourcemaps init hook running ${opts.id}\n`);
+      global.$$eventbus.trigger('log:debug', `plugin-sourcemaps init hook running '${opts.id}'.`);
    }
    catch (error)
    {
