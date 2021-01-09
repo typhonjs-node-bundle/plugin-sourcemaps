@@ -1,5 +1,8 @@
 const sourcemaps = require('rollup-plugin-sourcemaps');
 
+const s_CONFLICT_PACKAGES = ['rollup-plugin-sourcemaps'];
+const s_PACKAGE_NAME = '@typhonjs-node-rollup/plugin-sourcemaps';
+
 /**
  * Handles interfacing with the plugin manager adding event bindings to pass back a configured
  * instance of `rollup-plugin-sourcemaps`.
@@ -7,18 +10,18 @@ const sourcemaps = require('rollup-plugin-sourcemaps');
 class PluginLoader
 {
    /**
+    * Returns the any modules that cause a conflict.
+    *
+    * @returns {string[]}
+    */
+   static get conflictPackages() { return s_CONFLICT_PACKAGES; }
+
+   /**
     * Returns the `package.json` module name.
     *
     * @returns {string}
     */
-   static get pluginName() { return '@typhonjs-node-rollup/plugin-sourcemaps'; }
-
-   /**
-    * Returns the rollup plugins managed.
-    *
-    * @returns {string[]}
-    */
-   static get rollupPlugins() { return ['rollup-plugin-sourcemaps']; }
+   static get packageName() { return s_PACKAGE_NAME; }
 
    /**
     * Returns the configured input plugin for `rollup-plugin-sourcemaps`
