@@ -42,7 +42,7 @@ export default class PluginLoader
     *
     * @ignore
     */
-   static onPluginLoad(ev)
+   static async onPluginLoad(ev)
    {
       // TODO: Note there is a conflict w/ @rollup/plugin-typescript if loaded before it.
       // ev.eventbus.on('typhonjs:oclif:bundle:plugins:main:input:get', PluginHandler.PluginLoader, PluginLoader);
