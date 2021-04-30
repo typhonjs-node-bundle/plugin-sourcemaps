@@ -1,7 +1,7 @@
 import sourcemaps from 'rollup-plugin-sourcemaps';
 
 const s_CONFLICT_PACKAGES = ['rollup-plugin-sourcemaps'];
-const s_PACKAGE_NAME = '@typhonjs-node-rollup/plugin-sourcemaps';
+const s_PACKAGE_NAME = '@typhonjs-oclif-rollup/plugin-sourcemaps';
 
 /**
  * Handles interfacing with the plugin manager adding event bindings to pass back a configured
@@ -24,7 +24,7 @@ export default class PluginLoader
    static get packageName() { return s_PACKAGE_NAME; }
 
    /**
-    * Returns the configured input plugin for `rollup-plugin-sourcemaps`
+    * Returns the configured input plugin for `rollup-plugin-sourcemaps`.
     *
     * @returns {object} Rollup plugin
     */
